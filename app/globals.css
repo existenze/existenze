@@ -4,68 +4,48 @@
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
-
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
-
-    --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
-
-    /* Pastel pink */
-    --primary: 340 95% 77%;
-    --primary-foreground: 210 40% 98%;
-
-    /* Pastel purple */
-    --secondary: 260 75% 80%;
-    --secondary-foreground: 210 40% 98%;
-
-    /* Pastel teal */
-    --accent: 174 70% 75%;
-    --accent-foreground: 222.2 47.4% 11.2%;
-
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
-
+    --background: 36 30% 94%;
+    --foreground: 20 36% 25%;
+    --card: 36 25% 96%;
+    --card-foreground: 20 36% 25%;
+    --popover: 36 25% 96%;
+    --popover-foreground: 20 36% 25%;
+    --primary: 28 56% 35%;
+    --primary-foreground: 36 25% 96%;
+    --secondary: 82 25% 35%;
+    --secondary-foreground: 36 25% 96%;
+    --accent: 32 45% 54%;
+    --accent-foreground: 36 25% 96%;
+    --muted: 36 20% 90%;
+    --muted-foreground: 20 25% 45%;
     --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
-
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 340 95% 77%;
-
-    --radius: 0.75rem;
+    --destructive-foreground: 36 25% 96%;
+    --border: 20 30% 85%;
+    --input: 20 30% 85%;
+    --ring: 28 56% 35%;
+    --radius: 0;
   }
 
   .dark {
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
-
-    --card: 222.2 84% 4.9%;
-    --card-foreground: 210 40% 98%;
-
-    --popover: 222.2 84% 4.9%;
-    --popover-foreground: 210 40% 98%;
-
-    --primary: 340 95% 77%;
-    --primary-foreground: 222.2 47.4% 11.2%;
-
-    --secondary: 260 75% 80%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
-
-    --accent: 174 70% 75%;
-    --accent-foreground: 210 40% 98%;
-
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
-
+    --background: 20 36% 20%;
+    --foreground: 36 25% 90%;
+    --card: 20 36% 25%;
+    --card-foreground: 36 25% 90%;
+    --popover: 20 36% 25%;
+    --popover-foreground: 36 25% 90%;
+    --primary: 28 56% 35%;
+    --primary-foreground: 36 25% 96%;
+    --secondary: 82 25% 35%;
+    --secondary-foreground: 36 25% 96%;
+    --accent: 32 45% 54%;
+    --accent-foreground: 36 25% 96%;
+    --muted: 20 36% 30%;
+    --muted-foreground: 36 20% 70%;
     --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
-
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 340 95% 77%;
+    --destructive-foreground: 36 25% 90%;
+    --border: 20 36% 30%;
+    --input: 20 36% 30%;
+    --ring: 28 56% 35%;
   }
 }
 
@@ -75,32 +55,107 @@
   }
   body {
     @apply bg-background text-foreground;
+    background-image: url("data:image/png;base64,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");
+    font-family: "Courier New", Courier, monospace;
+  }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: "Times New Roman", Times, serif;
+    letter-spacing: -0.025em;
   }
 }
 
-/* Custom gradient backgrounds with pastel colors */
-.hero-gradient {
-  background: linear-gradient(135deg, hsl(340, 95%, 77%) 0%, hsl(260, 75%, 80%) 100%);
+/* Custom vintage styles */
+.vintage-border {
+  border: 2px solid hsl(var(--foreground));
+  box-shadow: 4px 4px 0 hsl(var(--foreground));
 }
 
-.card-highlight {
+.vintage-card {
+  @apply vintage-border bg-card;
   position: relative;
   overflow: hidden;
-  z-index: 1;
 }
 
-.card-highlight::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 6px;
-  background: linear-gradient(90deg, hsl(340, 95%, 77%), hsl(260, 75%, 80%), hsl(174, 70%, 75%));
-  z-index: 2;
+.vintage-header {
+  border-bottom: 3px double hsl(var(--foreground));
+  padding-bottom: 0.5rem;
+  margin-bottom: 1rem;
 }
 
-.badge-gradient {
-  background: linear-gradient(90deg, hsl(340, 95%, 77%), hsl(260, 75%, 80%));
-  color: white;
+.vintage-title {
+  font-family: "Times New Roman", Times, serif;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.vintage-badge {
+  @apply bg-primary text-primary-foreground;
+  border: 1px solid hsl(var(--foreground));
+  font-family: "Courier New", Courier, monospace;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-size: 0.7rem;
+  padding: 0.15rem 0.5rem;
+}
+
+.vintage-button {
+  @apply bg-primary text-primary-foreground;
+  border: 2px solid hsl(var(--foreground));
+  font-family: "Courier New", Courier, monospace;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  transition: none;
+  position: relative;
+}
+
+.vintage-button:hover {
+  top: 2px;
+  left: 2px;
+  box-shadow: none;
+}
+
+.vintage-button:not(:hover) {
+  box-shadow: 3px 3px 0 hsl(var(--foreground));
+}
+
+.vintage-divider {
+  height: 3px;
+  background: repeating-linear-gradient(
+    90deg,
+    transparent,
+    transparent 6px,
+    hsl(var(--foreground)) 6px,
+    hsl(var(--foreground)) 12px
+  );
+  margin: 1.5rem 0;
+}
+
+.vintage-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.catalog-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.vintage-image {
+  border: 1px solid hsl(var(--foreground));
+  padding: 0.5rem;
+  background-color: white;
+  transform: rotate(-1deg);
+}
+
+.vintage-price {
+  font-family: "Courier New", Courier, monospace;
+  font-weight: bold;
+  font-size: 1.2rem;
 }
